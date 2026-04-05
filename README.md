@@ -17,7 +17,7 @@ Those of you who are not working: how would you like it to work in your future w
 * Create a branch for the assigned task
 * Write code locally and commit
 * Once done, push to origin feature
-* Open a pull request from own branch with all details about has been done
+* Open a pull request from own branch with all the details about what has been done
 * CI/CD to test, linting, and verify
 * Do code review with teammates, make changes if needed
 * Update and push to the same branch
@@ -25,4 +25,37 @@ Those of you who are not working: how would you like it to work in your future w
 * Delete local branch
 
 4 What is a pull request?
-* A pull request (PR) is a way to propose your code changes to a team and ask for them to be reviewed and merged into the main cod
+* A pull request (PR) is a way to propose your code changes to a team and ask for them to be reviewed and merged into the main code.
+
+
+## 2 Project
+Workflow
+```
+testverktyg_04_CI_CD/
+├─ README.md
+├─ .gitignore
+├─ requirements.txt
+├─ pytest.ini
+├─ setup.cfg
+├─ .github/
+|  └─ workflows/
+|     └─ python-ci.yml
+├─ src/
+|  └─ algorithms/
+|     └─ bubble_sort.py
+├─ tests/
+|  └─ integration/
+|     └─ test_bubble_sort_integration.py
+|  └─ unit/
+|     └─ test_bubble_sort_unit.py
+```
+
+Unit Test
+```commandline
+pytest -v -m unit
+```
+
+Integration test
+```commandline
+pytest -v -m integration
+```
